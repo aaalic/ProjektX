@@ -1,15 +1,22 @@
 ﻿var counter = 0;
+var traffar = 0;
 
 $(document).ready(function () {
 
     $("#small").click(AddBoat5x5);
     $("#medium").click(AddBoat10x10);
     $("#large").click(AddBoat15x15);
+
+    $(".antalTraffar").hide();
+    $(".antalSkott").hide();
+
    
 });
 
 
 function AddBoat5x5() {
+    $(".antalTraffar").hide();
+    $(".antalSkott").show();
 
     var table = $('.divTable');
 
@@ -31,20 +38,21 @@ function AddBoat5x5() {
     $('td').click(function () {
 
         counter++;
+        $("#antalSkott").html(counter);
+        
 
         var click = this.getAttribute('id');
         var click2 = boat[0].toString();
         var click3 = boat[1].toString();
         var click4 = click2.concat(click3);
 
-        alert(click);
-        alert(click4);
-        alert(counter);
+
        
         if (click4 == click)
         {
             
             $(this).css("background-color", "green");
+           
 
         }
 
@@ -60,6 +68,9 @@ function AddBoat5x5() {
 };
 
 function AddBoat10x10() {
+
+    $(".antalTraffar").show();
+    $(".antalSkott").show();
 
     var table = $('.divTable');
 
@@ -84,6 +95,9 @@ function AddBoat10x10() {
     $('td').click(function () {
         
         counter++;
+        $("#antalSkott").html(counter);
+
+
 
         var click = this.getAttribute('id');
 
@@ -95,25 +109,28 @@ function AddBoat10x10() {
         var click6 = boat2[1].toString();
         var boat2Position = click5.concat(click6);
 
-        alert(boatPosition);
-        alert(boat2Position);
+     
 
 
         if (boatPosition == click || boat2Position == click) {
             alert("Träff!")
             $(this).css("background-color", "green");
+            traffar++;
 
         }
 
         else {
             $(this).css("background-color", "red");
         }
-        
+
+        $("#antalTraffar").html(traffar);
     })
     
 };
 
 function AddBoat15x15() {
+    $(".antalTraffar").show();
+    $(".antalSkott").show();
 
     var table = $('.divTable');
 
@@ -171,22 +188,19 @@ function AddBoat15x15() {
         var click12 = boat5[1].toString();
         var boat5Position = click11.concat(click12);
 
-        alert(boatPosition);
-        alert(boat2Position);
-        alert(boat3Position);
-        alert(boat4Position);
-        alert(boat5Position);
+
 
 
         if (boatPosition == click || boat2Position == click || boat3Position == click || boat4Position == click || boat5Position == click) {
             alert("Träff!")
             $(this).css("background-color", "green");
+            traffar++;
         }
 
         else {
             $(this).css("background-color", "red");
         }
-
+        $("#antalTraffar").html(traffar);
     })
 
 };
