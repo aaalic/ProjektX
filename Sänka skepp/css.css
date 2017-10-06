@@ -50,7 +50,14 @@ td {
     display: table-cell;
     padding: 3px 10px;
     background-color: lightblue;
-    height: 50px;
+    height:70px;
+   
 }
+.jumbotron{
+    width:50%;
 }
+h1{
+    text-align:center;
+}
+
 
