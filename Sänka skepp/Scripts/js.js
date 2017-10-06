@@ -1,5 +1,25 @@
 ﻿$(document).ready(function () {
 
+
+    //skapa spelplanen
+    for (var i = 0; i < 5; i++) {
+
+        for (var j = 0; j < 5; j++) {
+
+            // create a new div HTML element for each grid square and make it the right size
+
+            var square = document.createElement("div");
+            gameBoardContainer.appendChild(square);
+
+        }
+
+    }
+
+    $('#divTableCell').click(function () {
+        window.location.href = $('a', this).attr('href');
+    });
+
+
     $(".divTable").hide();
     $('.divTable2').hide();
 
