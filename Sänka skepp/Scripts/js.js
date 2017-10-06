@@ -1,6 +1,5 @@
 ﻿$(document).ready(function () {
 
-    var boat1 = [coordinateX, coordinateY];
     $("#small").click(AddBoat5x5);
     $("#medium").click(AddBoat10x10);
     $("#large").click(AddBoat15x15);
@@ -14,6 +13,8 @@ function AddBoat5x5() {
     var coordinateY = Math.floor((Math.random() * 5) + 1);
 
     var boat = [coordinateX, coordinateY];
+
+    return boat;
 };
 
 function AddBoat10x10() {
