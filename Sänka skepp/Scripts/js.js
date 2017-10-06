@@ -1,13 +1,15 @@
 ﻿$(document).ready(function () {
 
-    $(".divTable").hide();
-    $('.divTable2').hide();
+    //$(".divTable").hide();
+    //$('.divTable2').hide();
 
-    
-    var boat = $("#small").click(AddBoat5x5);
-    $("#medium").click(AddBoat10x10);
-    $("#large").click(AddBoat15x15);
+
+    //var boat = $("#small").click(AddBoat5x5);
+    //$("#medium").click(AddBoat10x10);
+    //$("#large").click(AddBoat15x15);
+
    
+
 });
 
 
