@@ -21,7 +21,9 @@
     $("#large").click(AddBoat15x15);
 
     $('td').click(function () {
-        alert(this.getAttribute('id'));
+        var click = this.getAttribute('id');
+
+        if(click == boat)
     })
    
 });
