@@ -45,4 +45,19 @@ button{
 .divTableBody {
     display: table-row-group;
 }
+td {
+    border: 1px solid #999999;
+    display: table-cell;
+    padding: 3px 10px;
+    background-color: lightblue;
+    height:70px;
+   
+}
+.jumbotron{
+    width:50%;
+}
+h1{
+    text-align:center;
+}
+
 
