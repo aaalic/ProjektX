@@ -45,4 +45,12 @@ button{
 .divTableBody {
     display: table-row-group;
 }
+td {
+    border: 1px solid #999999;
+    display: table-cell;
+    padding: 3px 10px;
+    background-color: lightblue;
+    height: 50px;
+}
+}
 

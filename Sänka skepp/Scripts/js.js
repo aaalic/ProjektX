@@ -1,15 +1,29 @@
 ﻿$(document).ready(function () {
 
-    //$(".divTable").hide();
-    //$('.divTable2').hide();
+    var table = $('.divTable');
 
 
-    //var boat = $("#small").click(AddBoat5x5);
-    //$("#medium").click(AddBoat10x10);
-    //$("#large").click(AddBoat15x15);
+    for (var i = 0; i < 5; i++) {
 
+        $(table).append('<tr>');
+
+        for (var j = 0; j < 5; j++) {
+            $(table).find('tr').eq(i).append('<td id=' + i + j +'>&nbsp;</td>');
+        }
+
+    } 
+    
+
+    console.log(table);
+    
+    var boat = $("#small").click(AddBoat5x5);
+    $("#medium").click(AddBoat10x10);
+    $("#large").click(AddBoat15x15);
+
+    $('td').click(function () {
+        alert(this.getAttribute('id'));
+    })
    
-
 });
 
 
