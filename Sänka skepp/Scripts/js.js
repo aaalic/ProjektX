@@ -1,4 +1,6 @@
-﻿$(document).ready(function () {
+﻿var counter = 0;
+
+$(document).ready(function () {
 
     
     
@@ -37,7 +39,29 @@ function AddBoat5x5() {
     var boat = [coordinateX, coordinateY];
 
     $('td').click(function () {
-        alert(this.getAttribute('id'));
+
+        counter++;
+
+        var click = this.getAttribute('id');
+        var click2 = boat[0].toString();
+        var click3 = boat[1].toString();
+        var click4 = click2.concat(click3);
+
+        alert(click);
+        alert(click4);
+        alert(counter);
+       
+        if (click4 == click)
+        {
+            alert("Träff!")
+        }
+
+        else
+        {
+            //Ändra färg
+        }
+
+
     })
     return boat;
 };
