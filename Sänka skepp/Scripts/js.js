@@ -2,19 +2,9 @@
 
 $(document).ready(function () {
 
-    
-    
-    var boat = $("#small").click(AddBoat5x5);
+    $("#small").click(AddBoat5x5);
     $("#medium").click(AddBoat10x10);
     $("#large").click(AddBoat15x15);
-
-    $('td').click(function () {
-        alert(this.getAttribute('id'));
-        var id = this.getAttribute('id');
-
-        $(id).css('background-color:red');
-
-    })
    
 });
 
@@ -53,17 +43,20 @@ function AddBoat5x5() {
        
         if (click4 == click)
         {
-            alert("Träff!")
+            
+            $(this).css("background-color", "green");
+
         }
 
         else
         {
-            //Ändra färg
+            $(this).css("background-color", "red");
+
         }
 
 
     })
-    return boat;
+    
 };
 
 function AddBoat10x10() {
@@ -89,9 +82,35 @@ function AddBoat10x10() {
     var boat2 = [coordinateZ, coordinateA];
 
     $('td').click(function () {
-        alert(this.getAttribute('id'));
-    })
+        
+        counter++;
 
+        var click = this.getAttribute('id');
+
+        var click2 = boat1[0].toString();
+        var click3 = boat1[1].toString();
+        var boatPosition = click2.concat(click3);
+
+        var click5 = boat2[0].toString();
+        var click6 = boat2[1].toString();
+        var boat2Position = click5.concat(click6);
+
+        alert(boatPosition);
+        alert(boat2Position);
+
+
+        if (boatPosition == click || boat2Position == click) {
+            alert("Träff!")
+            $(this).css("background-color", "green");
+
+        }
+
+        else {
+            $(this).css("background-color", "red");
+        }
+        
+    })
+    
 };
 
 function AddBoat15x15() {
@@ -127,7 +146,47 @@ function AddBoat15x15() {
     var boat5 = [coordinateF, coordinateG];
 
     $('td').click(function () {
-        alert(this.getAttribute('id'));
+
+        counter++;
+
+        var click = this.getAttribute('id');
+
+        var click2 = boat1[0].toString();
+        var click3 = boat1[1].toString();
+        var boatPosition = click2.concat(click3);
+
+        var click5 = boat2[0].toString();
+        var click6 = boat2[1].toString();
+        var boat2Position = click5.concat(click6);
+
+        var click7 = boat3[0].toString();
+        var click8 = boat3[1].toString();
+        var boat3Position = click7.concat(click8);
+
+        var click9 = boat4[0].toString();
+        var click10 = boat4[1].toString();
+        var boat4Position = click9.concat(click10);
+
+        var click11 = boat5[0].toString();
+        var click12 = boat5[1].toString();
+        var boat5Position = click11.concat(click12);
+
+        alert(boatPosition);
+        alert(boat2Position);
+        alert(boat3Position);
+        alert(boat4Position);
+        alert(boat5Position);
+
+
+        if (boatPosition == click || boat2Position == click || boat3Position == click || boat4Position == click || boat5Position == click) {
+            alert("Träff!")
+            $(this).css("background-color", "green");
+        }
+
+        else {
+            $(this).css("background-color", "red");
+        }
+
     })
 
 };
